@@ -1,0 +1,81 @@
+#################### POWER MANAGEMENT ####################
+https://github.com/AdnanHodzic/auto-cpufreq
+#### desabling tlp (if need)
+$ sudo nvim /etc/tlp.conf
+#TLP_ENABLE=1
+to
+TLP_ENABLE=0
+$ git clone https://github.com/AdnanHodzic/auto-cpufreq.git
+$ cd auto-cpufreq && sudo ./auto-cpufreq-installer
+#### enable
+$ sudo auto-cpufreq --install
+#### To disable and remove auto-cpufreq daemon, run:
+$ sudo auto-cpufreq --remove
+#### to see the status of service run:
+$ systemctl status auto-cpufreq
+run for service to persist running accross reboots
+$ systemctl enable auto-cpufreq
+
+
+#################### SSD ####################
+$ sudo systemctl enable fstrim.timer
+reinicia
+$ sudo systemctl status fstrim.timer
+
+
+#################### TIME ####################
+#### the best approach to keep both working is to set your RTC (hardware clock) to UTC
+$ sudo timedatectl set-local-rtc 0
+#### and enable a network-time-daemon on Linux.
+$sudo systemctl enable --now systemd-timesyncd
+
+
+#################### EXTERNAL HARD DRIVE ####################
+$ sudo blkid
+$ echo "UUID=7CC8D500C8D4B99A /mnt ntfs defaults,user 0 2" | sudo tee -a /etc/fstab
+
+$ sudo mount -a
+
+
+#################### HIBERNATION and SWAP-FILE  ####################
+# (https://confluence.jaytaala.com/display/TKB/Use+a+swap+file+and+enable+hibernation+on+Arch+Linux+-+including+on+a+LUKS+root+partition
+# https://www.youtube.com/watch?v=AorzS-FxFww
+# http://www.larsen-b.com/Article/460.html
+
+1) create a swap file with 16gb (Subsitua o valor de count=1048576 pelo tamanho em KBytes da sua partição. Por exemplo, caso queira uma partição de 16 GB o cálculo seria 16 * 1024 * 1024 = 16777216.)
+$ sudo dd if=/dev/zero of=/swapfile bs=1024 count=16777216 status=progress
+$ sudo mkswap /swapfile
+#### permition to the file
+$ sudo chmod 600 /swapfile
+#### enable
+$ sudo swapon /swapfile
+
+2) send to fstab
+$ sudo echo "UUID=ea6e0929-d316-48eb-988d-6e093acb669b none swap defaults 0 0" | sudo tee -a /etc/fstab
+#### se nao der certo: /swapfile none swap sw 0 0
+
+3) enable swap
+$ sudo swapon -a
+#### checking swap usage
+$ swapon --show
+
+4) hibernator
+$ sudo pacman -S hibernator
+$ sudo hibernator
+
+5) In /etc/default/grub added:
+$ findmnt -no UUID -T /var/swapfile
+#### (the swap file offset is the first block of numbers from the psysical_offset column))
+$ sudo filefrag -v /var/swapfile
+GRUB_CMDLINE_LINUX_DEFAULT="resume=UUID=ea6e0929-d316-48eb-988d-6e093acb669b resume_offset=143360 quiet splash"
+
+6) In /etc/mkinitcpio.conf added:
+resume to HOOKS (after udev)
+$ sudo mkinitcpio -P && sudo update-grub
+
+
+
+#################### HIBERNATION #####################
+$ sudo nvim /etc/default/grub
+GRUB_CMDLINE_LINUX="acpi_sleep=nonvs"
+$ sudo update-grub
