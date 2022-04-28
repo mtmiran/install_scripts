@@ -4,7 +4,6 @@
 
 #sudo passwd root
 
-
 # UPDATE
 sudo dpkg --configure -a
 sudo apt update
