@@ -20,9 +20,7 @@ sudo dpkg --add-architecture i386
 
 # EXECUTION
 
-install=("${basic[@]}")
-
-for program in ${install[@]}; do
+for program in ${basic[@]}; do
   if ! dpkg -l | grep -q $program; then
     sudo apt install -y "$program"
   else
