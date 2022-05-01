@@ -20,7 +20,7 @@ sudo apt install -y
 
 
 #### Microsoft
-sudo apt install ttf-mscorefonts-installer
+sudo apt install ttf-mscorefonts-installer -y
 
 
 #### Nerdfonts

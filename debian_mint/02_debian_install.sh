@@ -1,4 +1,4 @@
-#!/bin/bash
+#/bin/bash
 
 # UPDATE
 sudo dpkg --configure -a
@@ -43,12 +43,12 @@ micellanious=(lightdm rofi htop bash-completion tree unrar-free p7zip-full menco
 programming=(git xterm tmux python3-pip python3-dev pycodestyle pyflakes pylint neovim codium)
 
 # academic programms
-academic=(pdfarranger ttf-mscorefonts-installer calibre texlive-full texlive-lang-portuguese
+academic=(pdfarranger calibre texlive-full texlive-lang-portuguese
     texlive-science texlive-fonts-recommended texlive-latex-extra texlive-publishers latexmk
     texmaker libreoffice okular pandoc)
 
 # themes
-themes=(lxappearance blackbird-gtk-theme yaru-theme-icon papirus-icon-theme)
+themes=(lxappearance papirus-icon-theme)
 
 # gamer
 games=(steam)
@@ -57,16 +57,16 @@ games=(steam)
 # EXECUTION
 
 install=(
-      #"${i3[@]}"
-      #"${xfce[@]}"
-      #"${files[@]}"
-      #"${network[@]}"
-      #"${sreen[@]}"
-      #"${video[@]}"
-      #"${image[@]}"
-      #"${micellanious[@]}"
-      #"${programming[@]}"
-      #"${academic[@]}"
+      "${i3[@]}"
+      "${xfce[@]}"
+      "${files[@]}"
+      "${network[@]}"
+      "${sreen[@]}"
+      "${video[@]}"
+      "${image[@]}"
+      "${micellanious[@]}"
+      "${programming[@]}"
+      "${academic[@]}"
       #"${themes[@]}"
       #"${games[@]}"
        )
@@ -82,11 +82,11 @@ done
 
 
 #### FILES ####
-mkdir /home/$USER/Documentos
-mkdir /home/$USE/Imagens
-mkdir /home/$USE/Downloads
-mkdir /home/$USE/Musicas
-mkdir /home/$USE/Videos
+# mkdir /home/$USER/Documentos
+# mkdir /home/$USE/Imagens
+# mkdir /home/$USE/Downloads
+# mkdir /home/$USE/Musicas
+# mkdir /home/$USE/Videos
 
 #### ENABLE STUFFS ####
 # enable firewall
