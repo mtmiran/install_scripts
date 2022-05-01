@@ -57,18 +57,18 @@ games=(steam)
 # EXECUTION
 
 install=(
-      "${i3[@]}"
-      "${xfce[@]}"
-      "${files[@]}"
-      "${network[@]}"
-      "${sreen[@]}"
-      "${video[@]}"
-      "${image[@]}"
-      "${micellanious[@]}"
-      "${programming[@]}"
-      "${academic[@]}"
-      #"${themes[@]}"
-      #"${games[@]}"
+      # "${i3[@]}"
+      # "${xfce[@]}"
+      # "${files[@]}"
+      # "${network[@]}"
+      # "${sreen[@]}"
+      # "${video[@]}"
+      # "${image[@]}"
+      # "${micellanious[@]}"
+      # "${programming[@]}"
+      # "${academic[@]}"
+      # "${themes[@]}"
+      # "${games[@]}"
        )
 
 for program in ${install[@]}; do
