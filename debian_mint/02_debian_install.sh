@@ -40,7 +40,7 @@ image=(feh gimp)
 micellanious=(lightdm rofi htop bash-completion tree unrar-free p7zip-full mencoder libavcodec-extra clamav clamav-freshclam gdebi gparted synaptic rsync rclone figlet ufw stacer)
 
 # programming
-programming=(git xterm tmux python3-pip python3-dev pycodestyle pyflakes pylint neovim codium)
+programming=(git xterm python3-pip python3-dev pycodestyle pyflakes pylint neovim codium)
 
 # academic programms
 academic=(pdfarranger calibre texlive-full texlive-lang-portuguese

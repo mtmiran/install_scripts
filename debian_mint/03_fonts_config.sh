@@ -14,10 +14,6 @@ rm -rf rofi-themes-collection
 ## vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-## coc
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt install -y
-
 
 #### Microsoft
 sudo apt install ttf-mscorefonts-installer -y
