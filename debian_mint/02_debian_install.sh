@@ -13,13 +13,16 @@ sudo apt autoclean -y
 # i3
 i3=(i3)
 
+# cinnamon
+cinnamon=(cinnamon-desktop-environment)
+
 # xfce
 xfce=(xfce4 xfce4-goodies)
 
 # PROGRAMS
 
 # files
-files=(thunar vifm)
+files=(thunar ranger)
 
 # network
 network=(network-manager firefox-esr qbittorrent brave-browser)
@@ -37,7 +40,7 @@ video=(mpv kdenlive)
 image=(feh gimp)
 
 # micellanious
-micellanious=(lightdm rofi htop bash-completion tree unrar-free p7zip-full mencoder libavcodec-extra clamav clamav-freshclam gdebi gparted synaptic rsync rclone figlet ufw stacer)
+micellanious=(lightdm rofi htop bash-completion tree unrar-free p7zip-full mencoder libavcodec-extra clamav clamav-freshclam gdebi gparted synaptic rsync rclone figlet ufw stacer tlp tlp-rdw)
 
 # programming
 programming=(git xterm python3-pip python3-dev pycodestyle pyflakes pylint neovim codium)
@@ -59,6 +62,7 @@ games=(steam)
 install=(
       # "${i3[@]}"
       # "${xfce[@]}"
+      # "${cinnamon[@]}"
       # "${files[@]}"
       # "${network[@]}"
       # "${sreen[@]}"
@@ -91,8 +95,9 @@ done
 #### ENABLE STUFFS ####
 # enable firewall
 # sudo ufw enable
+# sudo systemctl enable tlp
 
-# virtualization
+### Virtualization ###
 # sudo systemctl status libvirtd.service
 # sudo systemctl enable --now libvirtd
 # sudo usermod -aG libvirt $USER
