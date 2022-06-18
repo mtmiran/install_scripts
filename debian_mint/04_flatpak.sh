@@ -26,6 +26,9 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # Zoom
 # flatpak install flathub us.zoom.Zoom
 
+# Stremio
+# flatpak install flathub com.stremio.Stremio
+
 # list applications: flatpak list
 # uninstall: flatpak uninstall [programa]
 # search program: flatpak search [program]
