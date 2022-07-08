@@ -42,13 +42,13 @@ echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https:/
     | sudo tee /etc/apt/sources.list.d/vscodium.list
 
 # Neovim Ubuntu-Mint
-# sudo add-apt-repository ppa:neovim-ppa/stable
+sudo add-apt-repository ppa:neovim-ppa/stable
 
 ## UBUNTU ##
 # # stop snapd services
-# sudo systemctl stop snapd && sudo systemctl disable snapd
+ sudo systemctl stop snapd && sudo systemctl disable snapd
 # # purge snapd
-# sudo apt autoremove --purge snapd gnome-software-plugin-snap
+sudo apt autoremove --purge snapd gnome-software-plugin-snap
 # # remove no longer needed folders
-# rm -rf ~/snap
-# sudo rm -rf /snap /var/snap /var/lib/snapd /var/cache/snapd /usr/lib/snapd
+rm -rf ~/snap
+sudo rm -rf /snap /var/snap /var/lib/snapd /var/cache/snapd /usr/lib/snapd

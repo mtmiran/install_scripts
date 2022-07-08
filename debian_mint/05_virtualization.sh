@@ -1,8 +1,7 @@
 #!/bin/bash
 
 
-virt=(qemu qemu-kvm qemu-system qemu-utils libvirt-daemon-system libvirt-bin libvirt-clients libvirt-daemon-system bridge-utils
-    libguestfs-tools virtinst libosinfo-bin virt-manager)
+virt=(qemu qemu-kvm qemu-system qemu-utils libvirt-daemon-system libvirt-bin libvirt-clients libvirt-daemon-system bridge-utils libguestfs-tools virtinst libosinfo-bin virt-manager)
 
 # execute
 for program in ${virt[@]}; do

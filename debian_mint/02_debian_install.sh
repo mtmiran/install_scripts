@@ -60,19 +60,20 @@ games=(steam)
 # EXECUTION
 
 install=(
-      # "${i3[@]}"
-      # "${xfce[@]}"
+      "${i3[@]}"
+      "${xfce[@]}"
       # "${cinnamon[@]}"
       # "${files[@]}"
-      # "${network[@]}"
-      # "${sreen[@]}"
-      # "${video[@]}"
-      # "${image[@]}"
-      # "${micellanious[@]}"
-      # "${programming[@]}"
-      # "${academic[@]}"
+      "${network[@]}"
+      "${sreen[@]}"
+      "${audio[@]}"
+      "${video[@]}"
+      "${image[@]}"
+      "${micellanious[@]}"
+      "${programming[@]}"
+      "${academic[@]}"
       # "${themes[@]}"
-      # "${games[@]}"
+      "${games[@]}"
        )
 
 for program in ${install[@]}; do
@@ -93,18 +94,18 @@ done
 # mkdir /home/$USE/Videos
 
 #### ENABLE STUFFS ####
-# enable firewall
-# sudo ufw enable
-# sudo systemctl enable tlp
+enable firewall
+sudo ufw enable
+sudo systemctl enable tlp
 
 ### Virtualization ###
-# sudo systemctl status libvirtd.service
-# sudo systemctl enable --now libvirtd
-# sudo usermod -aG libvirt $USER
-# sudo usermod -aG kvm $USER
+sudo systemctl status libvirtd.service
+sudo systemctl enable --now libvirtd
+sudo usermod -aG libvirt $USER
+sudo usermod -aG kvm $USER
 
 #### Youtube-dlp ####
-# python3 -m pip install -U yt-dlp
+python3 -m pip install -U yt-dlp
 
 
 # PYTHON
