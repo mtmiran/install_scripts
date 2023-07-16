@@ -180,6 +180,11 @@ yay -S grass saga-gis
     :so 
     :PackerSync
 
+#### tmux
+
+`git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+`sudo pacman -S  xsel`
+
 ## 3 - Flatpaks
 
 sudo pacman -S flatpak
