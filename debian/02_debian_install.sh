@@ -34,7 +34,7 @@ sreen=(arandr obs-studio xfce4-screenshooter)
 audio=(alsa-utils pulseaudio pavucontrol ffmpeg audacity xbindkeys pipewire bluez-* pulseaudio-module-bluetooth blueman)
 
 # video
-video=(mpv)
+video=(mpv kdenlive peek)
 
 # image
 image=(feh gimp)
@@ -51,33 +51,31 @@ academic=(pdfarranger calibre texlive-full texlive-lang-portuguese texlive-scien
 # themes
 themes=(lxappearance papirus-icon-theme)
 
-
 # EXECUTION
 
 install=(
-      #"${i3[@]}"
-      "${xfce[@]}"
-      # "${cinnamon[@]}"
-      # "${files[@]}"
-      "${network[@]}"
-      "${sreen[@]}"
-      "${audio[@]}"
-      "${video[@]}"
-      "${image[@]}"
-      "${micellanious[@]}"
-      "${programming[@]}"
-      "${academic[@]}"
-      # "${themes[@]}"
-       )
+	#"${i3[@]}"
+	"${xfce[@]}"
+	# "${cinnamon[@]}"
+	# "${files[@]}"
+	"${network[@]}"
+	"${sreen[@]}"
+	"${audio[@]}"
+	"${video[@]}"
+	"${image[@]}"
+	"${micellanious[@]}"
+	"${programming[@]}"
+	"${academic[@]}"
+	# "${themes[@]}"
+)
 
 for program in ${install[@]}; do
-  if ! dpkg -l | grep -q $program; then
-    sudo apt install -y "$program"
-  else
-    echo "[INSTALED] - $program"
-  fi
+	if ! dpkg -l | grep -q $program; then
+		sudo apt install -y "$program"
+	else
+		echo "[INSTALED] - $program"
+	fi
 done
-
 
 #### FILES ####
 # mkdir /home/$USER/Documentos
@@ -99,7 +97,6 @@ sudo usermod -aG kvm $USER
 
 #### Youtube-dlp ####
 python3 -m pip install -U yt-dlp
-
 
 ##### POS-INSTALL #####
 

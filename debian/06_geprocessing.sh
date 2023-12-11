@@ -16,7 +16,5 @@ sudo apt update
 
 sudo apt install qgis qgis-plugin-grass saga
 
-
-
 ## Google Earth
 sudo apt install google-earth-pro-stable

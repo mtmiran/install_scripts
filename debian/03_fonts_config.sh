@@ -1,14 +1,14 @@
 #!/bin/bash
 
-#### Neovim extras #### 
+#### Neovim extras ####
 # lint and formating
 sudo apt install shellcheck shfmt # bash
-pip3 install black flake8 # pyhton
+pip3 install black flake8         # pyhton
 
 # markdown - html - javascript
 sudo apt install nodejs
 sudo apt install npm
-sudo npm install -g prettier markdownlint eslint 
+sudo npm install -g prettier eslint markdownlint-cli2
 
 # lua
 npx @johnnymorganz/stylua-bin --help
@@ -17,19 +17,16 @@ npx @johnnymorganz/stylua-bin --help
 
 git clone https://github.com/lr-tech/rofi-themes-collection.git
 cd rofi-themes-collection
-mv -f themes/  ~/.local/share/rofi/
+mv -f themes/ ~/.local/share/rofi/
 cd ..
 rm -rf rofi-themes-collection
-
 
 #### FOR TMUX ####
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 sudo apt install xsel
 
-
 #### Microsoft
 sudo apt install ttf-mscorefonts-installer -y
-
 
 #### Nerdfonts
 cd /temp/
