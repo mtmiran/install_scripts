@@ -21,10 +21,10 @@ flatpak install flathub org.onlyoffice.desktopeditors
 # flatpak install flathub org.kde.kdenlive
 
 # Obsidian
-# flatpak install flathub md.obsidian.Obsidian
+flatpak install flathub md.obsidian.Obsidian
 
 # Jabref
-# flatpak install flathub org.jabref.jabref
+flatpak install flathub org.jabref.jabref
 
 # Zoom
 # flatpak install flathub us.zoom.Zoom

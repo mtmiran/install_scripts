@@ -9,19 +9,6 @@
 sudo apt install libvulkan1 mesa-vulkan-drivers mesa-vulkan-drivers:i386
 
 
-## Instalação do Wine:
-**instalar versão staging**
-
-<https://wiki.winehq.org/Download>
-
-### Winetricks - DXVK
-```
-sudo apt install winetricks
-WINEPREFIX=$HOME/prefix_wine winecfg
-sudo winetricks --self-update
-WINEPREFIX=$HOME/prefix_wine winetricks dxvk
-```
-
 ## Steam
 
 ```

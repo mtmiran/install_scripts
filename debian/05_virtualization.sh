@@ -5,7 +5,8 @@
 # $ sudo systemctl restart systemd-networkd
 # https://linuxhint.com/install_configure_kvm_archlinux/
 
-virt=(qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils libguestfs-tools genisoimage virtinst libosinfo-bin)
+virt=(qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils
+    libguestfs-tools genisoimage virtinst libosinfo-bin virt-manager)
 
 # execute
 for program in ${virt[@]}; do
@@ -13,8 +14,8 @@ for program in ${virt[@]}; do
 done
 
 # enable
-sudo adduser vivek libvirt
-sudo adduser vivek libvirt-qemu
+sudo adduser $USER libvirt
+sudo adduser $USER libvirt-qemu
 sudo systemctl start libvirtd.service
 sudo systemctl enable libvirtd.service
 sudo usermod -a -G libvirt $(whoami)
