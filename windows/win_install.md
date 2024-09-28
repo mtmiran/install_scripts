@@ -13,9 +13,9 @@
 ### chocolatey.org/packages
 
 choco install mpv firefox brave 7zip malwarebytes googledrive -y 
-choco install foxitereader libreoffice-fresh onlyoffice -y
+choco install foxitereader onlyoffice -y
 choco install virtualbox -y
-choco install gimp inkscape audacuty kdenlive obs-studio -y 
+choco install gimp audacity kdenlive obs-studio -y 
 choco install dotnet3.5 -y
 choco install git python vscode notepadplusplus -y
 
