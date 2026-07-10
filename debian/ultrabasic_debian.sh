@@ -5,10 +5,9 @@
 echo ++++++++++++++++++++
 echo + Install packages +
 echo ++++++++++++++++++++
-sudo apt install i3 i3blocks lightdm x11-xserver-utils -y
-sudo apt install pulseaudio nm-tray fonts-font-awesome -y
-sudo apt install curl git bc feh -y
-sudo apt install vim xfe xfe-themes -y
+sudo apt install i3 lightdm x11-xserver-utils -y
+sudo apt install fonts-font-awesome curl feh gimp -y
+sudo apt install git tmux vim -y
 
 echo +++++++++++++++++++++++++++
 echo + Install Thorium browser +
