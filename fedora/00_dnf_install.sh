@@ -77,6 +77,7 @@ sudo dnf install steam gamemode mangohud -y
 enable firewall
 sudo ufw enable
 sudo systemctl enable tlp
+sudo systemctl enable --now "syncthing@$USER.service"
 systemctl --user enable syncthing.service
 systemctl --user start syncthing.service
 
