@@ -1,15 +1,10 @@
-#!/bin/bash
-
-sudo dnf install flatpak &&
-
-# flathub
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo &&
+#!/usr/bin/env bash
 
 # discord
-# flatpak install -y flathub com.discordapp.Discord
+# flatpak install flathub com.discordapp.Discord
 
 # skype
-# flatpak install -y flathub com.skype.Client
+# flatpak install flathub com.skype.Client
 
 # onlyoffice
 # flatpak install -y flathub org.onlyoffice.desktopeditors
@@ -22,7 +17,13 @@ flatpak install -y flathub org.jabref.jabref
 flatpak override --user --filesystem=host org.jabref.jabref
 
 # gnome extentions
-flatpak install -y flathub com.mattjakeman.ExtensionManager
+# flatpak install -y flathub com.mattjakeman.ExtensionManager
+
+# Brave
+flatpak install -y flathub com.brave.Browser
+
+# Vscodium
+flatpak install -y flathub com.vscodium.codium
 
 # signal
 flatpak install -y flathub org.signal.Signal
@@ -30,11 +31,10 @@ flatpak install -y flathub org.signal.Signal
 # Stremio
 flatpak install -y flathub com.stremio.Stremio
 
-# Pika Backup
-flatpak install -y flathub org.gnome.World.PikaBackup
+# Steam
+flatpak install -y flathub com.valvesoftware.Steam  
 
-# Bitwarden
-flatpak install -y flathub com.bitwarden.desktop
+flatpak override --user com.valvesoftware.Steam --filesystem=host
 
 # list applications: flatpak list
 # uninstall: flatpak uninstall [programa]
